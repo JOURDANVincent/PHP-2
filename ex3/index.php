@@ -27,14 +27,19 @@
     <?php
         
         // déclaration des variables 
-        $age = 10;
-        $gender = 'Homme';
+        $age = rand(1,30);
+        $array = ['Homme', 'Femme', 'Bot'];
+        $keys = array_rand($array, 1);
+        $gender = $array[$keys];
+
+        echo 'Votre genre : ' .$gender. '<br>';
+        echo 'Votre âge : ' .$age. ' ans<br><br>';
 
         // Affichage en fonctions de sconditions demandées
         if($gender == 'Homme' AND $age >= 18) {echo 'Vous êtes un homme et vous êtes majeur !!';}
         else if($gender == 'Homme') {echo 'Vous êtes un homme et vous êtes mineur !!';}
 
-        if($gender == 'Femme' AND $age >= 18) {echo 'Vous êtes une femme et vous êtes majeure !!';}
+        else if($gender == 'Femme' AND $age >= 18) {echo 'Vous êtes une femme et vous êtes majeure !!';}
         else if($gender == 'Femme') {echo 'Vous êtes une femme et vous êtes mineur !!';}
 
         else {echo 'T\'est un bot ou bien !!!!!';}

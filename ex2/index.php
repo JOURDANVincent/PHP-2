@@ -18,10 +18,18 @@
     <?php
         
         // déclaration des variables 
-        $isEasy = false;
+        $isEasy = (bool)rand(0,1);
 
         if($isEasy == true) {echo 'C\'est facile !!';}
         else {echo 'C\'est difficle !!';}
+
+        // 2 eme manière
+        if($isEasy) {echo 'C\'est facile !!';}
+        else {echo 'C\'est difficle !!';}
+
+        // 3eme technique
+        $result = ($isEasy == false) ? 'C\'est difficile !!' : 'C\'est facile !!';
+        echo $result;
 
     ?>
 

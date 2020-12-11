@@ -20,16 +20,16 @@
     <?php
         
         // déclaration des variables 
-        $gender = 'Femme';
+        $array = ['Homme', 'Femme', 'Bot'];
+        $keys = array_rand($array, 1);
+        $gender = $array[$keys];
+        
+        // Affichage du genre
+        echo $gender. '<br>';
 
         // Affichage en fonctions des conditions demandées
-        if($gender != 'Homme'){
-            echo 'C\'est une développeuse !!!';
-        } else {
-            echo 'C\'est un développeur !!!';
-        }
-        
-                   
+        if($gender != 'Homme'){echo 'C\'est une développeuse !!!';
+        } else {echo 'C\'est un développeur !!!';}       
 
     ?>
 

@@ -18,10 +18,11 @@
     <?php
         
         // déclaration des variables 
-        $age = 37;
+        $age = rand(1,130);
 
-        if($age >= 18) {echo 'Vous êtes majeur !!';}
-        else {echo 'Vous êtes mineur !!';}
+        // conditions et affichage
+        if($age >= 18) {echo "Vous avez {$age} ans, vous êtes majeur !!";}
+        else {echo "Vous avez {$age} ans, vous êtes majeur !!";}
 
     ?>
 
